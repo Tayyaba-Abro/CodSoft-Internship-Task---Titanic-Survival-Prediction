@@ -4,7 +4,7 @@
 In this repository, you will find a comprehensive analysis of the famous Titanic dataset and a machine learning model that predicts passenger survival. This project aims to explore key factors affecting passenger survival, such as gender, age, passenger class, and embarkation location.
 
 ## Quick Links:
-(Dataset:)[https://www.kaggle.com/datasets/brendan45774/test-file]
+[Dataset:](https://www.kaggle.com/datasets/brendan45774/test-file)
 
 ## Understanding Dataset 
 -- 1. PassengerID: A unique identifier for each passenger in the dataset. It serves as a primary key for individual records.
@@ -17,6 +17,8 @@ In this repository, you will find a comprehensive analysis of the famous Titanic
 -- 8. Parch: Represents the number of parents or children that a passenger had aboard the Titanic. 
 -- 9. Ticket: The ticket number associated with the passenger's ticket. It is an alphanumeric identifier.
 -- 10. Fare: The fare or price paid by the passenger for their ticket.
+
+These column details provide a clear understanding of the dataset's features, which is essential for data analysis, feature engineering, and building predictive models. Each column has a specific role and type of data, and some may be more relevant than others for predicting passenger survival or for other analysis tasks related to the Titanic dataset.
 
 
 
