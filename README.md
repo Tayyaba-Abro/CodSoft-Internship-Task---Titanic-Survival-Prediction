@@ -104,7 +104,7 @@ plt.legend(survival_rates.index, title='Sex', loc='upper right', bbox_to_anchor=
 # Display the chart
 plt.show()
 ```
-![survivalby sec](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/a2f55c2e-5675-4480-88c3-4289a13d3ca2)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/a2f55c2e-5675-4480-88c3-4289a13d3ca2" width="500" height="400">
 
 #### ii. Calculate the Percentage of Passengers for each Embarkation Category
 ```python
@@ -123,7 +123,7 @@ plt.bar_label(bars, labels=[f'{percentage:.2f}%' for percentage in embarked_perc
 # Display the chart
 plt.show()
 ```
-![population by embarked](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/c681dc09-8970-42df-abc8-ff0fe107b50f)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/c681dc09-8970-42df-abc8-ff0fe107b50f" width="400" height="400">
 
 #### iii. Calculate Survival Rates for each Embarkation Category
 ```python
@@ -141,7 +141,7 @@ plt.title('Survival Rate by Embarkation Category')
 # Display the chart
 plt.show()
 ```
-![percentage of embarked by surviva](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/22e0660e-6bcc-4548-a2c3-c72b061cb368)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/22e0660e-6bcc-4548-a2c3-c72b061cb368" width="400" height="400">
 
 #### iv. Calculate the Percentage of Passengers for each Passenger Class
 ```python
@@ -161,7 +161,7 @@ plt.bar_label(bars, labels=[f'{percentage:.2f}%' for percentage in pclass_percen
 # Display the chart
 plt.show()
 ```
-![passenger class](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/66c9bd38-063e-4428-b85f-19c02804537a)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/66c9bd38-063e-4428-b85f-19c02804537a" width="400" height="400">
 
 #### v. Calculate Survival Rates for each Passenger Class
 ```python
