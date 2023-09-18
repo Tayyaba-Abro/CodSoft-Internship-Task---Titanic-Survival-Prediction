@@ -37,7 +37,7 @@ df = pd.read_csv(r"C:\Users\Asad Ali\Desktop\Courses\Internship\CodSoft\Task 1 -
 # show first 5 rows of the DataFrame
 df.head()
 ```
-![df head](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fe8c358c-2082-47f1-b3e2-fdeaa4c3452f)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fe8c358c-2082-47f1-b3e2-fdeaa4c3452f" width="400" height="300">
 
 ### 3. Understanding Dataset:
 ```python
@@ -45,6 +45,7 @@ df.head()
 df.shape
 ```
 ![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fbbae38a-7569-4c14-a28b-8e64eedba4eb)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fbbae38a-7569-4c14-a28b-8e64eedba4eb" width="400" height="300">
 
 ```python
 # display basic statistics of the DataFrame
