@@ -17,7 +17,9 @@ Dataset: [Titanic Survival Prediciton Dataset](https://www.kaggle.com/datasets/b
 9. Ticket: The ticket number associated with the passenger's ticket. It is an alphanumeric identifier.  
 10. Fare: The fare or price paid by the passenger for their ticket.  
 
-These column details provide a clear understanding of the dataset's features, which is essential for data analysis, feature engineering, and building predictive models. Each column has a specific role and type of data, and some may be more relevant than others for predicting passenger survival or for other analysis tasks related to the Titanic dataset.
+These columns details provide a clear understanding of the dataset's features, which is essential for data analysis, feature engineering, and building predictive models. Each column has a specific role and type of data, and some may be more relevant than others for predicting passenger survival or for other analysis tasks related to the Titanic dataset.
+
+
 
 
 
