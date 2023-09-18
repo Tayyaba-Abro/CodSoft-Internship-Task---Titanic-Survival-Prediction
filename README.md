@@ -19,7 +19,17 @@ Dataset: [Titanic Survival Prediciton Dataset](https://www.kaggle.com/datasets/b
 
 These columns details provide a clear understanding of the dataset's features, which is essential for data analysis, feature engineering, and building predictive models. Each column has a specific role and type of data, and some may be more relevant than others for predicting passenger survival or for other analysis tasks related to the Titanic dataset.
 
+## Task:
+The following procedure was followed to conplete titanic survival prediction task:
 
+### Importing Libraries:
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+```
 
 
 
