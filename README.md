@@ -123,7 +123,7 @@ plt.bar_label(bars, labels=[f'{percentage:.2f}%' for percentage in embarked_perc
 # Display the chart
 plt.show()
 ```
-<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/c681dc09-8970-42df-abc8-ff0fe107b50f" width="400" height="400">
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/c681dc09-8970-42df-abc8-ff0fe107b50f" width="400" height="500">
 
 #### iii. Calculate Survival Rates for each Embarkation Category
 ```python
@@ -141,7 +141,7 @@ plt.title('Survival Rate by Embarkation Category')
 # Display the chart
 plt.show()
 ```
-<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/22e0660e-6bcc-4548-a2c3-c72b061cb368" width="400" height="400">
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/22e0660e-6bcc-4548-a2c3-c72b061cb368" width="400" height="500">
 
 #### iv. Calculate the Percentage of Passengers for each Passenger Class
 ```python
@@ -179,7 +179,7 @@ plt.title('Survival Rate by Passenger Class (Pclass)')
 # Display the chart
 plt.show()
 ```
-![Survival by Passenger Class](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/5d4a4144-95c7-4fa3-9327-a4ef01ef8be2)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/5d4a4144-95c7-4fa3-9327-a4ef01ef8be2" width="400" height="500">
 
 ```python
 # map values from Embarked and Sex columns to integer values and change the datatype
@@ -224,4 +224,55 @@ plt.grid(True)
 # Display the histogram
 plt.show()
 ```
-![age survival](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/68c97a76-85b0-4382-9db9-190e5ca1f44b)
+<img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/68c97a76-85b0-4382-9db9-190e5ca1f44b" width="400" height="500">
+
+### 6. Data Modeling
+```python
+train = df.drop(['Survived'], axis=1)
+test = df.iloc[:,1]
+x_train, x_test, y_train, y_test = train_test_split(train, test, test_size = 0.2, random_state = 1)
+```
+
+### 7. Logistic Regression
+```python
+# Logistic regression accuracy score
+LR = LogisticRegression(solver='liblinear', max_iter=200)
+LR.fit(x_train, y_train)
+y_pred = LR.predict(x_test)
+LRAcc = accuracy_score(y_pred,y_test)
+print('Logistic regression accuracy: {:.2f}%'.format(LRAcc*100))
+
+# Logistic Regression Plot
+LRAcc = 0.9286 
+
+# Create a bar graph
+plt.bar(['Logistic Regression'], [LRAcc])
+plt.ylim(0, 1)  # Set the y-axis limit from 0 to 1 for accuracy percentage
+
+# Add labels
+plt.xlabel('Model')
+plt.ylabel('Accuracy')
+plt.title('Model Accuracy Comparison')
+
+# Display the accuracy as text on top of the bar
+plt.text('Logistic Regression', LRAcc + 0.02, f'{LRAcc*100:.2f}%', ha='center')
+
+# Show the graph
+plt.show()
+```
+![Logistic Regression](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/99652569-fb60-45b9-89e9-c29148048483)
+
+## Conclusion:
+In the course of this Titanic survival prediction project, we embarked on a data-driven journey to uncover valuable insights hidden within the Titanic dataset. By following a systematic workflow, we gained a deeper understanding of the factors influencing survival rates and made several key predictions.
+
+-- **Survival by Sex:** Our analysis revealed that women were overwhelmingly preferred for survival. Remarkably, no adult males survived the tragic event.
+
+-- **Age Distribution of Survival & Non-Survivals:** We observed a preference for survival among individuals in the lower to middle age range. Those above 40 were least prioritized for survival
+
+-- **Embarkation Insights:** Passengers who embarked from Queenstown, despite being fewer in number, experienced the highest survival rate. In contrast, Southampton, with a larger passenger population, had the lowest survival rate
+
+-- **Survival by Passenger Class:** First-class passengers had the highest survival rate, emphasizing the privilege associated with higher class. Second-class passengers, on the other hand, faced the lowest survival rate among the other classes.
+
+Throughout this journey, we employed data preprocessing, exploratory data analysis, and logistic regression modeling to derive these insights. While our analysis provides valuable historical context, it's essential to remember that these findings are based on data from a specific event in history and may not generalize to all scenarios. This project highlights the power of data analysis in unraveling patterns and stories hidden within datasets. It also serves as a reminder of the human stories behind the numbers—the individuals who experienced the Titanic tragedy.
+
+
