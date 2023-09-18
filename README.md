@@ -161,7 +161,7 @@ plt.bar_label(bars, labels=[f'{percentage:.2f}%' for percentage in pclass_percen
 # Display the chart
 plt.show()
 ```
-![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/0636e840-8257-4130-a3a9-79edaa676267)
+![passenger class](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/66c9bd38-063e-4428-b85f-19c02804537a)
 
 #### v. Calculate Survival Rates for each Passenger Class
 ```python
@@ -181,7 +181,6 @@ plt.show()
 ```
 ![Survival by Passenger Class](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/5d4a4144-95c7-4fa3-9327-a4ef01ef8be2)
 
-### Mapping Values for Model
 ```python
 # map values from Embarked and Sex columns to integer values and change the datatype
 df['Embarked'] = df['Embarked'].map( {'Q': 0,'S':1,'C':2}).astype(int)
@@ -195,4 +194,34 @@ df['Fare'] = df['Fare'].astype(int)
 df.dtypes
 ```
 ![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/0f32caba-77a5-4a99-a843-1881ab9ae775)
+
+```python
+# create a copy of df DataFrame without columns PassengerId, Name, Cabin, and Ticket
+df.drop(['PassengerId','Name','Cabin','Ticket'], axis =1, inplace=True)
+# show first 5 records of the DataFrame
+df.head()
 ```
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/f2761366-9866-45f0-8c3f-854fc52d10d4)
+
+### Filter data for survivors and non-survivors
+```python
+survivors = df[df['Survived'] == 1]
+non_survivors = df[df['Survived'] == 0]
+
+# Create bins with a difference of 10
+bins = range(0, 91, 10)  # Bins from 0 to 90 with a step of 10
+
+# Create a histogram for the age distribution of survivors
+plt.figure(figsize=(10, 6))
+plt.hist(non_survivors['Age'].dropna(), bins=bins, color='#ff9999', label='Non-Survivors')
+plt.hist(survivors['Age'].dropna(), bins=bins, color='#66b3ff', label='Survivors')
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.title('Age Distribution of Survivors and Non-Survivors')
+plt.legend()
+plt.grid(True)
+
+# Display the histogram
+plt.show()
+```
+![age survival](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/68c97a76-85b0-4382-9db9-190e5ca1f44b)
