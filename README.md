@@ -4,7 +4,7 @@
 In this repository, you will find a comprehensive analysis of the famous Titanic dataset and a machine learning model that predicts passenger survival. This project aims to explore key factors affecting passenger survival, such as gender, age, passenger class, and embarkation location.
 
 ## Quick Links:
-[Titanic Survival Prediciton Dataset](https://www.kaggle.com/datasets/brendan45774/test-file)
+Dataset: [Titanic Survival Prediciton Dataset](https://www.kaggle.com/datasets/brendan45774/test-file)
 
 ## Understanding Dataset 
 - 1. PassengerID: A unique identifier for each passenger in the dataset. It serves as a primary key for individual records.
