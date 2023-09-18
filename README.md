@@ -161,7 +161,7 @@ plt.bar_label(bars, labels=[f'{percentage:.2f}%' for percentage in pclass_percen
 # Display the chart
 plt.show()
 ```
-![ratio of percentage of class](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/bd1ffb02-219c-444b-9ac1-f681713a451e)
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/0636e840-8257-4130-a3a9-79edaa676267)
 
 #### v. Calculate Survival Rates for each Passenger Class
 ```python
@@ -178,4 +178,21 @@ plt.title('Survival Rate by Passenger Class (Pclass)')
 
 # Display the chart
 plt.show()
+```
+![Survival by Passenger Class](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/5d4a4144-95c7-4fa3-9327-a4ef01ef8be2)
+
+### Mapping Values for Model
+```python
+# map values from Embarked and Sex columns to integer values and change the datatype
+df['Embarked'] = df['Embarked'].map( {'Q': 0,'S':1,'C':2}).astype(int)
+df['Sex'] = df['Sex'].map( {'female': 1,'male':0}).astype(int)
+
+# change the datatypes of columns Age and Fare from float to integer
+df['Age'] = df['Age'].astype(int)
+df['Fare'] = df['Fare'].astype(int)
+
+# check the datatypes of all the columns once again to see the changes
+df.dtypes
+```
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/0f32caba-77a5-4a99-a843-1881ab9ae775)
 ```
