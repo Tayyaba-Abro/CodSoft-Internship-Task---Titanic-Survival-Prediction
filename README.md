@@ -1,15 +1,18 @@
 # CodSoft Internship Task - Titanic Survival Prediction
 
+![Slide1](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/81e781c7-d721-44c0-b081-d92b5cc01fbb)
+
 ## Introduction: 
 In this repository, you will find a comprehensive analysis of the famous Titanic dataset and a machine learning model that predicts passenger survival. This project aims to explore key factors affecting passenger survival, such as gender, age, passenger class, and embarkation location.
 
 ## Quick Links:
-Dataset: [Titanic Survival Prediciton Dataset](https://www.kaggle.com/datasets/brendan45774/test-file)
+Dataset: [Titanic Survival Prediction Dataset](https://www.kaggle.com/datasets/brendan45774/test-file)
 
 ## Understanding Dataset 
 1. PassengerID: A unique identifier for each passenger in the dataset. It serves as a primary key for individual records.  
 2. Survived: Indicates whether a passenger survived (1) or did not survive (0) the Titanic disaster. This is the target variable for predictive modeling.  
-3. Pclass: Represents the passenger class, with three possible values: 1st class (1), 2nd class (2), and 3rd class (3). It reflects the socio-economic status of passengers. 4. Name: The full name of the passenger. It includes both the passenger's title and their name.   
+3. Pclass: Represents the passenger class, with three possible values: 1st class (1), 2nd class (2), and 3rd class (3). It reflects the socio-economic status of passengers.   
+4. Name: The full name of the passenger. It includes both the passenger's title and their name.   
 5. Sex: Specifies the gender of the passenger, either male or female.  
 6. Age: The age of the passenger in years. It represents the passenger's age at the time of boarding the Titanic.  
 7. SibSp: Indicates the number of siblings or spouses that a passenger had aboard the Titanic.  
@@ -273,6 +276,4 @@ In the course of this Titanic survival prediction project, we embarked on a data
 
 -- **Survival by Passenger Class:** First-class passengers had the highest survival rate, emphasizing the privilege associated with higher class. Second-class passengers, on the other hand, faced the lowest survival rate among the other classes.
 
-Throughout this journey, we employed data preprocessing, exploratory data analysis, and logistic regression modeling to derive these insights. While our analysis provides valuable historical context, it's essential to remember that these findings are based on data from a specific event in history and may not generalize to all scenarios. This project highlights the power of data analysis in unraveling patterns and stories hidden within datasets. It also serves as a reminder of the human stories behind the numbers—the individuals who experienced the Titanic tragedy.
-
-
+Throughout this journey, we employed data preprocessing, exploratory data analysis, and logistic regression modeling to derive these insights. While our analysis provides valuable historical context, it's essential to remember that these findings are based on data from a specific event in history and may not generalize to all scenarios. 
