@@ -22,7 +22,7 @@ These columns details provide a clear understanding of the dataset's features, w
 ## Task:
 The following procedure was followed to conplete titanic survival prediction task:
 
-### Importing Libraries:
+### 1. Importing Libraries:
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -30,6 +30,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 ```
+### 2. Importing Dataset: 
+```python
+# create a pandas DataFrame to read csv
+df = pd.read_csv(r"C:\Users\Asad Ali\Desktop\Courses\Internship\CodSoft\Task 1 - Titanic Survival\titanic.csv")
+# show first 5 rows of the DataFrame
+df.head()
+
+
 
 
 
