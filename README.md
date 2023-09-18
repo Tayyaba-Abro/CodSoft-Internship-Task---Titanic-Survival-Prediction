@@ -36,9 +36,42 @@ from sklearn.metrics import accuracy_score
 df = pd.read_csv(r"C:\Users\Asad Ali\Desktop\Courses\Internship\CodSoft\Task 1 - Titanic Survival\titanic.csv")
 # show first 5 rows of the DataFrame
 df.head()
+```
+![df head](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fe8c358c-2082-47f1-b3e2-fdeaa4c3452f)
 
+### 3. Understanding Dataset:
+```python
+# check the records and attributes of the DataFrame (rows and columns)
+df.shape
+```
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fbbae38a-7569-4c14-a28b-8e64eedba4eb)
 
+```python
+# display basic statistics of the DataFrame
+df.describe()
+```
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/e2341610-f09c-4e09-8bbb-212c754a4c18)
 
+```python
+# check if there are any null values in the DataFrame
+df.isnull().sum()
+```
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/648daa1a-26d8-45f2-9db4-1a1ad196feff)
 
+```python
+# check datatypes of all the columns in the DataFrame
+df.dtypes
+```
+![data types](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fbb33b00-b62d-4499-a6bb-d7ac6c2566d0)
+
+```python
+# take mean of Age column and fill the value for all the missing values in that column
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+# similarly take mean of fare column and fill the missing values
+df['Fare'] = df['Fare'].fillna(df['Fare'].mean())
+df['Fare']
+df['Age']
+```
+![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/b7767e50-8d75-4c24-b9af-7d73b5cef6cd)
 
 
