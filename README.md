@@ -22,7 +22,7 @@ Dataset: [Titanic Survival Prediction Dataset](https://www.kaggle.com/datasets/b
 
 These columns details provide a clear understanding of the dataset's features, which is essential for data analysis, feature engineering, and building predictive models. Each column has a specific role and type of data, and some may be more relevant than others for predicting passenger survival or for other analysis tasks related to the Titanic dataset.
 
-## Task:
+## Tasks
 The following procedure was followed to conplete titanic survival prediction task:
 
 ### 1. Importing Libraries:
@@ -67,7 +67,7 @@ df.dtypes
 ```
 ![data types](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/fbb33b00-b62d-4499-a6bb-d7ac6c2566d0)
 
-### 4. Preprocessing 
+### 4. Preprocessing: 
 ```python
 # take mean of Age column and fill the value for all the missing values in that column
 df['Age'] = df['Age'].fillna(df['Age'].mean())
@@ -86,7 +86,7 @@ for Embarkeds in Embarked:
 ```
 ![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/f34073f5-6c7c-4f38-97bc-a8fa1e1166a1)
 
-### 5. Exploratory Data analysis (EDA)
+### 5. Exploratory Data analysis (EDA):
 We have performed Exploratory Data analysis (EDA) based on following parameters:
 
 #### i. Calculate Survival Rates for each Sex
