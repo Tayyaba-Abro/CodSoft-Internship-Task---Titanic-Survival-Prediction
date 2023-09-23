@@ -87,9 +87,11 @@ for Embarkeds in Embarked:
 ![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/f34073f5-6c7c-4f38-97bc-a8fa1e1166a1)
 
 ### 5. Exploratory Data analysis (EDA):
-We have performed Exploratory Data analysis (EDA) based on following parameters:
+We have performed Exploratory Data analysis (EDA) based on following parts:
 
-#### i. Calculate Survival Rates for each Sex
+#### Part 1: Passenger Demographics and Survival
+
+##### i. Calculate Survival Rates for each Sex
 ```python
 survival_rates = df.groupby('Sex')['Survived'].mean()
 
@@ -109,7 +111,7 @@ plt.show()
 ```
 <img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/a2f55c2e-5675-4480-88c3-4289a13d3ca2" width="500" height="400">
 
-#### ii. Calculate the Percentage of Passengers for each Embarkation Category
+##### ii. Calculate the Percentage of Passengers for each Embarkation Category
 ```python
 # Calculate the percentage of passengers for each embarkation category
 embarked_percentage = df['Embarked'].value_counts(normalize=True) * 100
@@ -128,7 +130,7 @@ plt.show()
 ```
 <img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/c681dc09-8970-42df-abc8-ff0fe107b50f" width="400" height="500">
 
-#### iii. Calculate Survival Rates for each Embarkation Category
+##### iii. Calculate Survival Rates for each Embarkation Category
 ```python
 # Calculate survival rates for each embarkation category
 survival_rates = df.groupby('Embarked')['Survived'].mean()
@@ -146,7 +148,7 @@ plt.show()
 ```
 <img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/22e0660e-6bcc-4548-a2c3-c72b061cb368" width="400" height="500">
 
-#### iv. Calculate the Percentage of Passengers for each Passenger Class
+##### iv. Calculate the Percentage of Passengers for each Passenger Class
 ```python
 # Calculate the percentage of passengers for each passenger class
 pclass_percentage = df['Pclass'].value_counts(normalize=True) * 100
@@ -166,7 +168,7 @@ plt.show()
 ```
 <img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/66c9bd38-063e-4428-b85f-19c02804537a" width="400" height="400">
 
-#### v. Calculate Survival Rates for each Passenger Class
+##### v. Calculate Survival Rates for each Passenger Class
 ```python
 # Calculate survival rates for each passenger class
 survival_rates = df.groupby('Pclass')['Survived'].mean()
@@ -184,6 +186,8 @@ plt.show()
 ```
 <img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/5d4a4144-95c7-4fa3-9327-a4ef01ef8be2" width="400" height="500">
 
+#### Part 2: Data Transformation
+In addition to the above procedure, we will map values in the 'Embarked' and 'Sex' columns to integers and change the data types of 'Age' and 'Fare' columns to integers.
 ```python
 # map values from Embarked and Sex columns to integer values and change the datatype
 df['Embarked'] = df['Embarked'].map( {'Q': 0,'S':1,'C':2}).astype(int)
@@ -206,7 +210,9 @@ df.head()
 ```
 ![image](https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/f2761366-9866-45f0-8c3f-854fc52d10d4)
 
-### Filter data for survivors and non-survivors
+#### Part 3: Data Filtering and Visualization
+
+Now, we will filter data for survivors and non-survivors
 ```python
 survivors = df[df['Survived'] == 1]
 non_survivors = df[df['Survived'] == 0]
@@ -229,14 +235,14 @@ plt.show()
 ```
 <img src="https://github.com/Tayyaba-Abro/CodSoft-Internship-Task---Titanic-Survival-Prediction/assets/47588244/68c97a76-85b0-4382-9db9-190e5ca1f44b" width="400" height="500">
 
-### 6. Data Modeling
+### 6. Data Modeling and Training the Model
 ```python
 train = df.drop(['Survived'], axis=1)
 test = df.iloc[:,1]
 x_train, x_test, y_train, y_test = train_test_split(train, test, test_size = 0.2, random_state = 1)
 ```
 
-### 7. Logistic Regression
+### 7. Logistic Regression Model
 ```python
 # Logistic regression accuracy score
 LR = LogisticRegression(solver='liblinear', max_iter=200)
